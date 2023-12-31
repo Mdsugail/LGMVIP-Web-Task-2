@@ -1,0 +1,129 @@
+/**
+ * Styles for the body element to set background, font family, 
+ * margins and padding.
+ * 
+ * Also includes keyframe animations for a gradient background.
+ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+body {
+    animation: gradient 15s ease infinite;
+
+    @keyframes gradient {
+        100% {
+            background-position: 100% 50%;
+        }
+
+        50% {
+            background-position: 0% 50%;
+        }
+
+        0% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.10s;
+    border-radius: 10px
+}
+
+#getUsersBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#getUsersBtn:hover {
+    background-color: #3e8e41;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+.navbar {
+    /* background-color: #007bff; */
+    background-image: linear-gradient(to right top, #000000, #291e24, #4a3748, #665473, #7b75a3, #7783b2, #7190bf, #6b9eca, #6195b3, #5e8a9c, #5e7e86, #607274);
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    font-weight: bold;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 1rem;
+}
+
+.navbar .menu li:first-child {
+    margin-left: auto;
+}
+
+/**
+ * Applies a rainbow linear gradient background to H2 elements, 
+ * clips the background to just the text, and makes the text transparent
+ * to show the gradient background.
+ */
+h2 {
+    background: linear-gradient(to right, grey,#5F8670, #AC87C5, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2 {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
